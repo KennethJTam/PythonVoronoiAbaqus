@@ -355,3 +355,7 @@ myAssembly.Instance(name='SuperCell-Negative-1', part=myModel.parts["Negative-cu
 myAssembly.Instance(name='SuperCell-1', part=myModel.parts["SuperCell"], dependent=ON)
 myAssembly.InstanceFromBooleanCut(name='SuperCell-cut',instanceToBeCut=myAssembly.instances['SuperCell-1'],
                                   cuttingInstances=(myAssembly.instances['SuperCell-Negative-1'], ), originalInstances=SUPPRESS)
+
+# Create Shell from Solid for a foam material
+myModel.Part(name='SuperCell-Shell', objectToCopy=myModel.parts['SuperCell-cut'])
+myModel.parts['SuperCell-Shell'].RemoveCells(cellList=myModel.parts['SuperCell-Shell'].cells)
