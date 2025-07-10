@@ -1,2 +1,2 @@
 # PythonSupercellVoronoiAbaqus
-Generate a 3D voronoi structure in Abaqus with a supercell to automatically generate periodic boundary condition in Python    
+This is a python code to generate a 3D voronoi structure in AbaqusCAE with a supercell to automatic generate periodic boundary conditions. 
